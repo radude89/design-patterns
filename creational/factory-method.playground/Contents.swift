@@ -12,10 +12,14 @@ import Foundation
 /// ## When to use it:
 ///     - a class can't anticipate the class of objects it must create.
 ///     - a class wants its subclasses to specify the objects it creates.
-///     - classes delegate responsibility to one of several helper subclassess, and you want to localize the knowledge of which helper subclass is the delegate.
-///     - 🏄 Use the Factory Method when you don’t know beforehand the exact types and dependencies of the objects your code should work with.
-///     - 🏊‍♀️ Use the Factory Method when you want to provide users of your library or framework with a way to extend its internal components.
-///     - ⛹️ Use the Factory Method when you want to save system resources by reusing existing objects instead of rebuilding them each time.
+///     - classes delegate responsibility to one of several helper subclassess,
+///     and you want to localize the knowledge of which helper subclass is the delegate.
+///     - 🏄 Use the Factory Method when you don’t know beforehand the exact
+///     types and dependencies of the objects your code should work with.
+///     - 🏊‍♀️ Use the Factory Method when you want to provide users of your
+///     library or framework with a way to extend its internal components.
+///     - ⛹️ Use the Factory Method when you want to save system resources
+///     by reusing existing objects instead of rebuilding them each time.
 ///
 /// More to read: https://refactoring.guru/design-patterns/factory-method
 
@@ -90,13 +94,13 @@ protocol ServiceFactory {
 
 enum LocalServiceFactory: ServiceFactory {
     static func makeService() -> Service {
-        return LocalService()
+        LocalService()
     }
 }
 
 enum UATServiceFactory: ServiceFactory {
     static func makeService() -> Service {
-        return UATService()
+        UATService()
     }
 }
 

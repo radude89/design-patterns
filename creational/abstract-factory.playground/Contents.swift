@@ -1,23 +1,30 @@
 import UIKit
 
-/// # Abstract factory
+/// # Abstract Factory
 ///
-/// - Description: Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+/// - Description: Provide an interface for creating families of related or dependent objects without specifying
+/// their concrete classes.
 ///
 /// ## Advantages:
 ///     - isolates concrete classes.
 ///     - makes exchanging product families easy.
 ///     - promotes consistency among products.
 ///
-/// ## Disadvantages:
+/// ## Disadvantage:
 ///     - supporting new kinds of products is difficult.
 ///
 /// ## When to use it:
-///     - a system should be independent of how its products are created, composed, and represented.
+///     - a system should be independent of how its products are created,
+///     composed, and represented.
 ///     - a system should be configured with one of multiple families of products.
-///     - a family of related product objects is designed to be used together, and you need to enforce this constraint.
-///     - you want to provide a class library of products, and you want to reveal just their interfaces, not their implementations.
-///     - 🏄‍♂️ Use the Abstract Factory when your code needs to work with various families of related products, but you don’t want it to depend on the concrete classes of those products—they might be unknown beforehand or you simply want to allow for future extensibility.
+///     - a family of related product objects is designed to be used together,
+///     and you need to enforce this constraint.
+///     - you want to provide a class library of products, and you want to reveal
+///     just their interfaces, not their implementations.
+///     - 🏄‍♂️ Use the Abstract Factory when your code needs to work with various
+///     families of related products, but you don’t want it to depend on the
+///     concrete classes of those products—they might be unknown beforehand
+///     or you simply want to allow for future extensibility.
 ///
 /// More to read: https://refactoring.guru/design-patterns/abstract-factory
 

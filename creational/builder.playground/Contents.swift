@@ -2,7 +2,8 @@ import UIKit
 
 /// # Builder
 ///
-/// - Description: separate the construction of a complex object from its representation so that the same construction process can create different representations.
+/// - Description: separate the construction of a complex object from its representation
+/// so that the same construction process can create different representations.
 ///
 /// ## Advantages:
 ///     - let's yo vary a product's internal representation.
@@ -10,10 +11,15 @@ import UIKit
 ///     - gives finer control over the construction process.
 ///
 /// ## When to use it:
-///     - the algorithm for creating a complex object should be independent of the parts that make up the object and how they are assembled.
-///     - the construction process must allow different representations for the object that's constructed.
-///     - 🧗‍♀️ Use the Builder pattern to get rid of a “telescopic constructor” (a constructor with multiple parameters).
-///     - 🏋️‍♀️ Use the Builder pattern when you want your code to be able to create different representations of some product (for example, stone and wooden houses).
+///     - the algorithm for creating a complex object should be independent
+///     of the parts that make up the object and how they are assembled.
+///     - the construction process must allow different representations
+///     for the object that's constructed.
+///     - 🧗‍♀️ Use the Builder pattern to get rid of a “telescopic constructor”
+///     (a constructor with multiple parameters).
+///     - 🏋️‍♀️ Use the Builder pattern when you want your code to be able to
+///     create different representations of some product (for example,
+///     stone and wooden houses).
 ///     - ⛹️ Use the Builder to construct Composite trees or other complex objects.
 ///
 /// More to read:
@@ -47,7 +53,7 @@ protocol ThemeBuilder {
     func retrieveTheme() -> Theme
 }
 
-class LightThemeBuilder: ThemeBuilder {
+final class LightThemeBuilder: ThemeBuilder {
     var textColor: UIColor = .white
     var backgroundColor: UIColor = .white
     
@@ -62,7 +68,7 @@ class LightThemeBuilder: ThemeBuilder {
     }
 }
 
-class DarkThemeBuilder: ThemeBuilder {
+final class DarkThemeBuilder: ThemeBuilder {
     var textColor: UIColor = .black
     var backgroundColor: UIColor = .black
     
@@ -77,7 +83,7 @@ class DarkThemeBuilder: ThemeBuilder {
     }
 }
 
-class ThemeDirector {
+final class ThemeDirector {
     var themeBuilder: ThemeBuilder
     
     init(themeBuilder: ThemeBuilder) {

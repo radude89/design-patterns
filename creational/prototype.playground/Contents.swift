@@ -2,7 +2,8 @@ import UIKit
 
 /// # Prototype
 ///
-/// - Description: specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.
+/// - Description: specify the kinds of objects to create using a prototypical instance,
+/// and create new objects by copying this prototype.
 ///
 /// ## Advantages:
 ///     - adding and removing products at run-time.
@@ -11,15 +12,23 @@ import UIKit
 ///     - reduced subclassing.
 ///     - configuring an application with classes dynamically.
 ///
-/// ## Disadvantages:
-///     - cloning complex objects that have circular references might be very tricky
+/// ## Disadvantage:
+///     - cloning complex objects that have circular references
+///     might be very tricky
 ///
 /// ## When to use it:
-///     - when the classes to instantiate are specified at run-time, for example, by dynamic loading.
-///     - to avoid building a class hierarcy of factories that parallels the class hierarchy of products.
-///     - when instances of a class can have one of only a few different combinations of state.
-///     - 🧘‍♀️ Use the Prototype pattern when your code shouldn’t depend on the concrete classes of objects that you need to copy.
-///     - 🏂 Use the pattern when you want to reduce the number of subclasses that only differ in the way they initialize their respective objects. Somebody could have created these subclasses to be able to create objects with a specific configuration.
+///     - when the classes to instantiate are specified at run-time,
+///     for example, by dynamic loading.
+///     - to avoid building a class hierarcy of factories that
+///     parallels the class hierarchy of products.
+///     - when instances of a class can have one of only a few
+///     different combinations of state.
+///     - 🧘‍♀️ Use the Prototype pattern when your code shouldn’t depend
+///     on the concrete classes of objects that you need to copy.
+///     - 🏂 Use the pattern when you want to reduce the number of
+///     subclasses that only differ in the way they initialize their
+///     respective objects. Somebody could have created these subclasses
+///     to be able to create objects with a specific configuration.
 ///
 /// More to read: https://theswiftdev.com/swift-prototype-design-pattern/
 
