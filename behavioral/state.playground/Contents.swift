@@ -2,22 +2,32 @@ import Foundation
 
 /// # State
 ///
-/// - Description: allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
+/// - Description: allow an object to alter its behavior when its internal
+/// state changes. The object will appear to change its class.
 ///
 /// ## Advantages:
-///     - it localizes state-specific behavior and partitions behavior for different states.
+///     - it localizes state-specific behavior and
+///     partitions behavior for different states.
 ///     - it makes state transitions explicit.
 ///     - state objects can be shared.
 ///
-/// ## Disadvantages:
-///     -
-///
 /// ## When to use it:
-///     - an object's behavior depends on its state, and it must change its behavior at run-time depending on that state.
-///     - operations have large, multipart conditional statements that depend on the object's state.
-///     - 🎿 Use the State pattern when you have an object that behaves differently depending on its current state, the number of states is enormous, and the state-specific code changes frequently.
-///     - ⛷ Use the pattern when you have a class polluted with massive conditionals that alter how the class behaves according to the current values of the class’s fields.
-///     - 🏇 Use State when you have a lot of duplicate code across similar states and transitions of a condition-based state machine.
+///     - an object's behavior depends on its state,
+///     and it must change its behavior at run-time depending
+///     on that state.
+///     - operations have large, multipart conditional
+///     statements that depend on the object's state.
+///     - 🎿 Use the State pattern when you have an object
+///     that behaves differently depending on its current state,
+///     the number of states is enormous, and the state-specific
+///     code changes frequently.
+///     - ⛷ Use the pattern when you have a class polluted
+///     with massive conditionals that alter how the class
+///     behaves according to the current values of the
+///     class’s fields.
+///     - 🏇 Use State when you have a lot of duplicate code
+///     across similar states and transitions of a condition-based
+///     state machine.
 ///
 /// More to read: https://refactoring.guru/design-patterns/state
 
@@ -111,7 +121,7 @@ protocol State: AnyObject {
 }
 
 final class BasicState: State {
-    var name: String { "basic \(UUID().uuidString)" }
+    let name = "basic \(UUID().uuidString)"
     
     private(set) weak var context: Context?
     
@@ -129,7 +139,7 @@ final class BasicState: State {
 }
 
 final class UpdatingState: State {
-    var name: String { "updating \(UUID().uuidString)" }
+    let name = "updating \(UUID().uuidString)"
     
     private(set) weak var context: Context?
     

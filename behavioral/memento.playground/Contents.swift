@@ -2,7 +2,8 @@ import UIKit
 
 /// # Memento
 ///
-/// - Description: without violating encapsulation capture and externalize an object's internal state so that the object can be restored to this state later.
+/// - Description: without violating encapsulation capture and externalize an
+/// object's internal state so that the object can be restored to this state later.
 ///
 /// ## Advantages:
 ///     - preserving encapsulation boundaries.
@@ -13,10 +14,15 @@ import UIKit
 ///     - hidden costs in caring for mementos.
 ///
 /// ## When to use it:
-///     - a snapshot of (some portion of) an object's state must be saved so that it can be restored to that state later, and
-///     - a direct interface to obtaining the state would expose implementation details and break the object's encapsulation.
-///     - 🗽 Use the Memento pattern when you want to produce snapshots of the object’s state to be able to restore a previous state of the object.
-///     - 🏰 Use the pattern when direct access to the object’s fields/getters/setters violates its encapsulation.
+///     - a snapshot of (some portion of) an object's state
+///     must be saved so that it can be restored to that state later
+///     - a direct interface to obtaining the state would expose
+///     implementation details and break the object's encapsulation.
+///     - 🗽 Use the Memento pattern when you want to produce
+///     snapshots of the object’s state to be able to restore
+///     a previous state of the object.
+///     - 🏰 Use the pattern when direct access to the object’s
+///     fields/getters/setters violates its encapsulation.
 ///
 /// More to read: https://refactoring.guru/design-patterns/memento
 
@@ -41,8 +47,12 @@ final class Editor {
     }
     
     func makeSnapshot() -> Snapshot {
-        print("We made of snapshot for the editor with text: \(text ?? "")")
-        return Snapshot(editor: self, text: text, position: position, selectionWidth: selectionWidth)
+        print("We made of snapshot for the editor" +
+            "with text: \(text ?? "")")
+        return Snapshot(editor: self,
+                        text: text,
+                        position: position,
+                        selectionWidth: selectionWidth)
     }
 
 }
@@ -54,7 +64,10 @@ final class Snapshot {
     private var position: CGPoint
     private var selectionWidth: CGFloat
     
-    init(editor: Editor, text: String?, position: CGPoint, selectionWidth: CGFloat) {
+    init(editor: Editor,
+         text: String?,
+         position: CGPoint,
+         selectionWidth: CGFloat) {
         self.editor = editor
         self.text = text
         self.position = position
